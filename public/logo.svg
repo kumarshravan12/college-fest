@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+  </defs>
+  
+  <!-- Outer Ring (Optional) -->
+  <circle cx="100" cy="100" r="95" fill="none" class="outer-ring" />
+
+  <!-- Top Text -->
+  <text fill="#8B0000" font-family="'Playfair Display', serif" font-weight="bold" font-size="24" letter-spacing="2">
+    <textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+      CULTURAHUB
+    </textPath>
+  </text>
+  
+  <!-- Bottom Text -->
+  <!-- We need a separate path for bottom text to ensure it's readable (not upside down) or adjust properties -->
+  <!-- Actually for bottom text, it's often better to flip the path or calculate. 
+       Let's try a simpler approach: rotated text or a second path. -->
+  <path id="bottomCirclePath" d="M 100, 100 m -70, 0 a 70,70 0 0,0 140,0 a 70,70 0 0,0 -140,0" />
+   <text fill="#c42d38" font-family="sans-serif" font-weight="bold" font-size="14" letter-spacing="1">
+    <textPath href="#bottomCirclePath" startOffset="50%" text-anchor="middle" side="right">
+       
+    </textPath>
+  </text>
+  
+  <!-- Actually, getting SVG text-on-path perfectly right blindly is tricky. 
+       Let's try a standard design with central element and text above/below. -->
+       
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#fff" stroke="#c42d38" stroke-width="4" />
+  
+  <!-- Center Illustration (Abstract Harmony/Hugging) -->
+  <g transform="translate(50, 50) scale(0.5)">
+    <!-- Stylized figures -->
+    <path d="M100 30 C110 30 118 38 118 48 C118 58 110 66 100 66 C90 66 82 58 82 48 C82 38 90 30 100 30 Z" fill="#c42d38"/>
+    <path d="M60 60 C70 60 78 68 78 78 C78 88 70 96 60 96 C50 96 42 88 42 78 C42 68 50 60 60 60 Z" fill="#c42d38"/>
+    <path d="M140 60 C150 60 158 68 158 78 C158 88 150 96 140 96 C130 96 122 88 122 78 C122 68 130 60 140 60 Z" fill="#c42d38"/>
+    
+    <!-- Bodies connecting -->
+    <path d="M100 70 C120 70 140 90 140 120 L140 160 C140 170 130 180 120 180 L80 180 C70 180 60 170 60 160 L60 120 C60 90 80 70 100 70 Z" fill="#ffcccb" />
+    <path d="M60 100 C40 100 20 120 20 150 L20 180 L80 180" fill="#ff9999" opacity="0.8"/>
+    <path d="M140 100 C160 100 180 120 180 150 L180 180 L120 180" fill="#ff9999" opacity="0.8"/>
+  </g>
+
+  <!-- Arched Text Top -->
+  <path id="topTextPath" d="M 40,100 A 60,60 0 0,1 160,100" fill="none" />
+  <text fill="#8B0000" font-family="serif" font-weight="bold" font-size="22" letter-spacing="1" text-anchor="middle">
+    <textPath href="#topTextPath" startOffset="50%">
+      CULTURAHUB
+    </textPath>
+  </text>
+
+  <!-- Arched Text Bottom -->
+  <path id="botTextPath" d="M 30,100 A 70,70 0 0,0 170,100" fill="none" />
+  <text fill="#c42d38" font-family="sans-serif" font-weight="bold" font-size="12" letter-spacing="1" text-anchor="middle">
+    <textPath href="#botTextPath" startOffset="50%">
+      SEC SUPAUL
+    </textPath>
+  </text>
+  
+  <!-- Decor Stars -->
+  <path d="M50 80 L52 85 L57 85 L53 88 L55 93 L50 90 L45 93 L47 88 L43 85 L48 85 Z" fill="#c42d38" />
+  <path d="M150 80 L152 85 L157 85 L153 88 L155 93 L150 90 L145 93 L147 88 L143 85 L148 85 Z" fill="#c42d38" />
+
+</svg>
